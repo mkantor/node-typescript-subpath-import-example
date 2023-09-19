@@ -1,11 +1,15 @@
 {
-  "name": "",
+  "name": "subpath-import-example",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "type": "module",
   "scripts": {
-    "start": "rm -rf dist && tsc --build && ./index.js"
+    "start": "rm -rf dist && tsc --build && chmod a+x ./dist/main.js && ./dist/main.js"
+  },
+  "imports": {
+    "#stuff/*.js": "./dist/stuff/*.js"
   },
   "devDependencies": {
-    "typescript": "latest"
+    "typescript": "^5.2.2"
   }
 }
